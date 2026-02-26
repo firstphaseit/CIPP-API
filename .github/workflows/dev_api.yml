@@ -17,7 +17,7 @@ jobs:
     permissions:
       id-token: write #This is required for requesting the JWT
       contents: read #This is required for actions/checkout
-    if: github.event.repository.fork == false && github.event_name == 'push'
+    # if: github.event.repository.fork == false && github.event_name == 'push'
     runs-on: windows-latest
 
     steps:
@@ -40,3 +40,4 @@ jobs:
           app-name: "cippjta72"
           slot-name: "Production"
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
